@@ -21,15 +21,15 @@ export class MapboxComponent implements OnInit {
   constructor() { }
 
   ngOnInit(){
-  	// this.buildMap();
-  	mapboxgl.accessToken = environment.mapbox.accessToken;
-      this.map = new mapboxgl.Map({
-        container: 'map',
-        style: this.style,
-        zoom: 13,
-        center: [this.lng, this.lat]
-    });
-    // Add map controls
+  	this.buildMap();
+  	// mapboxgl.accessToken = environment.mapbox.accessToken;
+   //    this.map = new mapboxgl.Map({
+   //      container: 'map',
+   //      style: this.style,
+   //      zoom: 13,
+   //      center: [this.lng, this.lat]
+   //  });
+   //  // Add map controls
     this.map.addControl(new mapboxgl.NavigationControl());
   }
 
