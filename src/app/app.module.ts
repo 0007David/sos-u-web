@@ -7,27 +7,26 @@ import {environment} from '../environments/environment';
 import { AppComponent } from './app.component';
 import { CatsComponent } from './cats/cats.component';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { AppheaderComponent } from './component/appheader/appheader.component';
-import { AppfooterComponent } from './component/appfooter/appfooter.component';
-import { AppsidebarComponent } from './component/appsidebar/appsidebar.component';
-import { AppsettingsComponent } from './component/appsettings/appsettings.component';
-import { AppnavbarComponent } from './component/appnavbar/appnavbar.component';
-import { AppmapComponent } from './component/appmap/appmap.component';
+
+import { LoginComponent } from './login/login.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AppRoutingModule } from './app-routing.module';
+
+import { AdminModule} from './admin/admin.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     CatsComponent,
-    AppheaderComponent,
-    AppfooterComponent,
-    AppsidebarComponent,
-    AppsettingsComponent,
-    AppnavbarComponent,
-    AppmapComponent
+    LoginComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase),
+    AdminModule,
+    AppRoutingModule
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent]
