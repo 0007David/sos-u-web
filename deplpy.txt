@@ -1,0 +1,7 @@
+
+#Para ejecutar en modo local
+cambiar del archivo package.json
+"start": "ng serve"
+#Para ejecutar en el servidor
+cambiar del archivo package.json
+"start": "node server.js"
