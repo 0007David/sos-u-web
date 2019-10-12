@@ -11,9 +11,6 @@ export class MapboxComponent implements OnInit {
 
 	map: mapboxgl.Map;
   style = 'mapbox://styles/deivi007/ck1ku61n101p91clmosl11j06';
-  // style = 'https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css';
-  // style = 'mapbox://styles/mapbox/outdoors-v9';
-
   lat = -17.784698;
   lng = -63.180338;
 
@@ -22,15 +19,6 @@ export class MapboxComponent implements OnInit {
 
   ngOnInit(){
   	this.buildMap();
-  	// mapboxgl.accessToken = environment.mapbox.accessToken;
-   //    this.map = new mapboxgl.Map({
-   //      container: 'map',
-   //      style: this.style,
-   //      zoom: 13,
-   //      center: [this.lng, this.lat]
-   //  });
-   //  // Add map controls
-    this.map.addControl(new mapboxgl.NavigationControl());
   }
 
   buildMap() {
@@ -38,7 +26,7 @@ export class MapboxComponent implements OnInit {
     this.map = new mapboxgl.Map({
       container: 'map',
       style: this.style,
-      zoom: 5,
+      zoom: 12,
       center: [this.lng, this.lat]
     });
     this.map.on('load', this.onLoad.bind(this));
@@ -58,7 +46,7 @@ export class MapboxComponent implements OnInit {
             "type": "Feature",
             "geometry": {
               "type": "Point",
-              "coordinates": [-66.324462890625, -16.024695711685304]
+              "coordinates": [-63.195888,-17.775211]
             },
             "properties": {
               "title": "Punto 1",
@@ -68,7 +56,7 @@ export class MapboxComponent implements OnInit {
             "type": "Feature",
             "geometry": {
               "type": "Point",
-              "coordinates": [-61.2158203125, -15.97189158092897]
+              "coordinates": [-63.169002,-17.798849]
             },
             "properties": {
               "title": "Puntos 2",
@@ -92,8 +80,6 @@ export class MapboxComponent implements OnInit {
     });
 
       // this.map.resize(); 
-    // /// Add map controls
-    // this.map.addControl(new mapboxgl.NavigationControl());
   }
 
 

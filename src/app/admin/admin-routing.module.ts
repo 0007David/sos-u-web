@@ -18,7 +18,7 @@ const routes: Routes =[
     { path : 'admin', component: HomeComponent, 
     	children: [
     	{ path: 'cats', component: FormPersonalApoyoComponent},
-    	{ path : 'mapa', component: MapboxComponent},
+      { path: 'home', component: MapboxComponent},
     	{ path: '**', component: PagNotFoundComponent },
 
        ]
