@@ -2,10 +2,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
-import { PageNotFoundComponent } from '../page-not-found/page-not-found.component';
+import { PagNotFoundComponent } from './pag-not-found/pag-not-found.component';
 import {CatsComponent} from '../cats/cats.component';
 import { FormPersonalApoyoComponent } from './form-personal-apoyo/form-personal-apoyo.component';
-import { PagNotFoundComponent } from './pag-not-found/pag-not-found.component';
 import { LoginComponent } from '../login/login.component';
 import { MapboxComponent } from './mapbox/mapbox.component';
 
